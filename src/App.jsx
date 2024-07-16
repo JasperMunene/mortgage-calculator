@@ -140,7 +140,7 @@ const App = () => {
         </div>
         <div className="pt-3">
           <p className={`text-lg pb-2 lg:text-base`}>Mortgage Amount</p>
-          <div className={`flex items-center border ${errors.amount ? "border-primary-red border-[1.5px] hover:border-primary-red" : "border-neutral-slate700"} ${focusedInput === 'amount' ? 'border-[1.5px] border-primary-lime hover:border-primary-lime' : 'border-neutral-slate700'} hover:border-neutral-slate900 hover:border-[1.5px] h-12 shadow-sm bg-white rounded-lg pr-1`}>
+          <label className={`flex items-center border ${errors.amount ? "border-primary-red border-[1.5px] hover:border-primary-red" : "border-neutral-slate700"} ${focusedInput === 'amount' ? 'border-[1.5px] border-primary-lime hover:border-primary-lime' : 'border-neutral-slate700'} hover:border-neutral-slate900 hover:border-[1.5px] h-12 shadow-sm bg-white rounded-lg pr-1`}>
             <div className={`${errors.amount ? "bg-primary-red" : "bg-neutral-slate100"} ${focusedInput === 'amount' ? 'bg-primary-lime' : 'bg-neutral-slate100'} p-2 w-14 h-[2.82rem] rounded-l-md mr-2 text-center cursor-pointer`}>
               <FontAwesomeIcon icon={faSterlingSign} className={`${errors.amount ? "text-neutral-slate100" : "text-neutral-slate700"} fa-xl lg:fa-md flex items-center justify-center pl-2 pt-1`} />
             </div>
@@ -153,13 +153,13 @@ const App = () => {
               onFocus={() => setFocusedInput('amount')}
               onBlur={() => setFocusedInput('')}
             />
-          </div>
+          </label>
           {errors.amount && <p className="text-sm pt-1 text-primary-red">{errors.amount}</p>}
 
           <div className="md:flex md:gap-20 w-full lg:w-1/2 lg:gap-10">
             <div className="w-full lg:w-max">
               <p className={`text-lg mt-2 pt-2 pb-2 lg:text-base`}>Mortgage Term</p>
-              <div className={`flex items-center border ${errors.term ? "border-primary-red border-[1.5px] hover:border-primary-red" : "border-neutral-slate700"} ${focusedInput === 'term' ? 'border-[1.5px] border-primary-lime hover:border-primary-lime' : 'border-neutral-slate700'} hover:border-[1.5px] hover:border-neutral-slate900 rounded-lg h-12 shadow-sm bg-white pl-1 cursor-pointer`}>
+              <label className={`flex items-center border ${errors.term ? "border-primary-red border-[1.5px] hover:border-primary-red" : "border-neutral-slate700"} ${focusedInput === 'term' ? 'border-[1.5px] border-primary-lime hover:border-primary-lime' : 'border-neutral-slate700'} hover:border-[1.5px] hover:border-neutral-slate900 rounded-lg h-12 shadow-sm bg-white pl-1 cursor-pointer`}>
                 <input
                   className="flex-1 border-none outline-none p-2 text-gray-700 lg:w-28 font-semibold cursor-pointer"
                   type="text"
@@ -170,12 +170,12 @@ const App = () => {
                   onBlur={() => setFocusedInput('')}
                 />
                 <p className={`${errors.term ? "bg-primary-red text-neutral-slate100" : "bg-neutral-slate100 text-neutral-slate700"} ${focusedInput === 'term' ? 'bg-primary-lime' : 'bg-neutral-slate100'}  w-24 lg:w-16 p-2 h-[2.82rem] rounded-r-md text-center text-base ml-2`}>years</p>
-              </div>
+              </label>
               {errors.term && <p className="text-sm pt-1 text-primary-red">{errors.term}</p>}
             </div>
             <div className="w-full lg:w-max">
               <p className={`text-lg mt-2 pt-2 pb-2 lg:text-base `}>Interest Rate</p>
-              <div className={`flex items-center border ${errors.interest ? "border-primary-red border-[1.5px] hover:border-primary-red" : "border-neutral-slate700"} ${focusedInput === 'interest' ? 'border-[1.5px] border-primary-lime hover:border-primary-lime' : 'border-neutral-slate700'} hover:border-[1.5px] hover:border-neutral-slate900 rounded-lg h-12 shadow-sm bg-white pl-1 cursor-pointer`}>
+              <label className={`flex items-center border ${errors.interest ? "border-primary-red border-[1.5px] hover:border-primary-red" : "border-neutral-slate700"} ${focusedInput === 'interest' ? 'border-[1.5px] border-primary-lime hover:border-primary-lime' : 'border-neutral-slate700'} hover:border-[1.5px] hover:border-neutral-slate900 rounded-lg h-12 shadow-sm bg-white pl-1 cursor-pointer`}>
                 <input
                   className="flex-1 border-none outline-none p-2 text-gray-700 lg:w-28 font-semibold cursor-pointer"
                   type="text"
@@ -186,7 +186,7 @@ const App = () => {
                   onBlur={() => setFocusedInput('')}
                 />
                 <p className={`${errors.interest ? "bg-primary-red text-neutral-slate100" : "bg-neutral-slate100 text-neutral-slate700"} ${focusedInput === 'interest' ? 'bg-primary-lime' : 'bg-neutral-slate100'} w-24 lg:w-14 p-2 h-[2.82rem] rounded-r-md text-center text-lg ml-2`}>%</p>
-              </div>
+              </label>
               {errors.interest && <p className="text-sm pt-1 text-primary-red">{errors.interest}</p>}
             </div>
           </div>
