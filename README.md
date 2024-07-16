@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live Site URL](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://github.com/JasperMunene/mortgage-calculator)
+- Live Site URL: [Live Site URL](https://mortgagecalculator0.netlify.app/)
 
 ## My process
 
