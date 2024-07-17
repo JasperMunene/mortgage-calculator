@@ -87,6 +87,12 @@ const validateInputs = (inputs) => {
     return errors;
   };
 ```
+```js
+// Adding a comma as a user types
+  const formatNumberWithCommas = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+```
 
 ### Useful resources
 
